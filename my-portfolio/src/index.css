@@ -56,18 +56,18 @@
         justify-content: center;
     }
 
+    @layer utilities {
+        .bg-gradient-custom {
+            background-image: linear-gradient(to bottom right, var(--fourth-color), var(--fifth-color))
+        }
+    }
+
     @keyframes scroll {
         0% {
         transform: translateX(0%);
         }
         100% {
         transform: translateX(-50%);
-        }
-    }
-
-    @layer utilities {
-        .bg-gradient-custom {
-            background-image: linear-gradient(to bottom right, var(--fourth-color), var(--fifth-color))
         }
     }
     
@@ -79,15 +79,7 @@
         .pause-on-hover:hover {
         animation-play-state: paused;
         }
-    }      
-
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
     
-    .scrollbar-hide {
-        -ms-overflow-style: none;  /* IE y Edge */
-        scrollbar-width: none;     /* Firefox */
     }
 
     .bg-footer {
